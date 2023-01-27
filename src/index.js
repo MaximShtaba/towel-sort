@@ -1,6 +1,8 @@
-
-// You should implement your task here.
-
 module.exports = function towelSort (matrix) {
-  return [];
-}
+	let reduseValue;
+	if ((matrix.length) == 0) {return matrix = [ ]} else {
+	 reduseValue = matrix.reduce(function(previousValue, item, index, array){
+		 item.sort((a,b)=>(index%2===0)? a-b:b-a).map(index=>previousValue.push(index));
+		return previousValue; }, [ ] ); 
+	  return reduseValue;}
+ }
